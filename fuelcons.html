@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <title>Fuel Consumption Calculator</title>
+<style>
+  
+    /* Remove the navbar's default margin-bottom and rounded borders */ 
+    .navbar {
+      background-color:#2550b2;
+      color: green;
+      margin-bottom: 0;
+      border-radius: 0;
+    }
+
+    body {
+        text-align: center;
+    }
+
+    input {
+        padding: 5px;
+        margin: 5px;
+    }
+
+    button {
+        padding: 8px;
+        font-size: 15px;
+        cursor: pointer;
+    }
+
+    /* Add a gray background color and some padding to the footer */
+    footer {
+      background-color: #526899;
+      padding: 25px;
+    }
+  </style>
+</head>
+<body>
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="#">Functions</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="calculator.html">Calculator</a></li>
+        <li><a href="checktime.html">Timecheck</a></li>
+        <li><a href="evenodd.html">Even & Odd #'s?</a></li>
+        <li class="active"><a style="background-color: yellowgreen;" href="fuelcons.html">Fuel Consumption Calculator</a></li>
+        <li><a href="show&hidepw.html">Show/Hide Password</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<br />
+
+<h3>Fuel Consumption Calculator</h3>
+
+<label for="distance">Total Distance (in kilometers): </label>
+<input type="number" id="distance" placeholder="Enter distance" required>
+
+<br />
+
+<label for="fuel">Total Fuel Consumed (in liters): </label>
+<input type="number" id="fuel" placeholder="Enter fuel consumed" required>
+
+<br />
+
+<button onclick="calculateAverage()">Calculate Average</button>
+
+<br />
+
+<p id="result"></p>
+
+<script src="fuelcons.js"></script>
+
+<br /> <br /> <br />
+<br /> <br /> <br />
+<br /> <br /> <br />
+<br /> <br /> <br />
+<br /> <br /> <br />
+
+        <footer class="container-fluid text-center">
+            <p>All Rights Reserved. 2023.</p>
+          </footer>
+
+</body>
+</html>

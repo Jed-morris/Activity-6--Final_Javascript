@@ -1,0 +1,63 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: grid;
+    height: 90%;
+  }
+
+.navbar {
+    background-color:#2550b2;
+    color: green;
+    margin-bottom: 0;
+    border-radius: 0;
+  }
+
+.wrapper{
+    position: relative;
+    height: 50px;
+    width: 250px;
+    border-radius: 8px;
+}
+
+.wrapper input{
+    width: 100%;
+    height: 80%;
+    border: 3px solid #225678;
+    font-size: 15px;
+    outline: none; 
+    border-radius: 5px;
+}
+
+.wrapper input::placeholder{
+    text-align: center;
+    font-size: 12px;
+}
+
+.wrapper span{
+    position: absolute;
+    right: 12px;
+    top: 45%;
+    transform: translateY(-50%);
+    font-size: 18px;    
+    color: royalblue;
+    cursor: pointer;
+    display: none;
+}
+
+.wrapper input:valid ~ span{
+    
+    display: block;
+}
+
+.wrapper span i.hide-btn::before{
+    content: "\f070";
+    color: aqua;
+}
+
+footer {
+    background-color: #526899;
+    padding: 25px;
+  }

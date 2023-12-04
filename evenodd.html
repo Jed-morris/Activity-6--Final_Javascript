@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <title>Even & Odd #'s</title>
+<style>
+  
+    /* Remove the navbar's default margin-bottom and rounded borders */ 
+    .navbar {
+      background-color:#2550b2;
+      color: green;
+      margin-bottom: 0;
+      border-radius: 0;
+    }
+
+    /* Add a gray background color and some padding to the footer */
+    footer {
+      background-color: #526899;
+      padding: 25px;
+    }
+  </style>
+</head>
+<body>
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="#">Functions</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="calculator.html">Calculator</a></li>
+        <li><a href="checktime.html">Timecheck</a></li>
+        <li class="active"><a style="background-color: yellowgreen;" href="evenodd.html">Even & Odd #'s?</a></li>
+        <li><a href="fuelcons.html">Fuel Consumption Calculator</a></li>
+        <li><a href="show&hidepw.html">Show/Hide Password</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="container-fluid bg-3 text-center">    
+    <h3 style="text-align: center; font-family: 'Times New Roman', Times, serif;"> Finding Odd & Even Numbers </h3>
+    <div class="container">
+        <h3 class="text-dark fw-bold text-center"> Enter a Number:
+            <input id="num"><button class="btn btn-warning" type="button" onclick="fun()">Check</button></p>
+        
+            <p id="resPara" style="display:none;">It is an <span id="res"></span> Number</p>
+          </div>
+        </div>
+
+        <script>
+            var num, temp;
+        function fun() {
+            num = parseInt(document.getElementById("num").value);
+            if(num) {
+                temp = document.getElementById("resPara");
+                temp.style.display = "block";
+                if(num%2==0)
+                document.getElementById("res").innerHTML = "Even";
+            else
+                document.getElementById("res").innerHTML = "Odd";
+            }
+        }
+        </script>
+
+<br /> <br /> <br />
+<br /> <br /> <br />
+<br /> <br /> <br />
+<br /> <br /> <br />
+<br /> <br /> <br />
+
+        <footer class="container-fluid text-center">
+            <p>All Rights Reserved. 2023.</p>
+          </footer>
+          
+        </body>
+        </html>

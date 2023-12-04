@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <title>Final_JS</title>
+<style>
+  
+    /* Remove the navbar's default margin-bottom and rounded borders */ 
+    .navbar {
+      background-color:#2550b2;
+      color: green;
+      margin-bottom: 0;
+      border-radius: 0;
+    }
+    
+    /* Add a gray background color and some padding to the footer */
+    footer {
+      background-color: #526899;
+      padding: 25px;
+    }
+  </style>
+</head>
+<body>
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="#">Functions</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li class="active"><a style="background-color: yellowgreen;" href="index.html">Home</a></li>
+        <li><a href="calculator.html">Calculator</a></li>
+        <li><a href="checktime.html">Timecheck</a></li>
+        <li><a href="evenodd.html">Even & Odd #'s?</a></li>
+        <li><a href="fuelcons.html">Fuel Consumption Calculator</a></li>
+        <li><a href="show&hidepw.html">Show/Hide Password</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="jumbotron">
+  <div class="container text-center">
+    <h2>10 Functionalities</h2>
+  </div>
+</div>
+  
+<div class="container-fluid bg-3 text-center">    
+  <h3>First 5:</h3>
+  <br />
+
+<!-------------------------MP3 Player------------------------------------>  
+  <div class="row">
+    <div class="col-8">
+      <h3>*MP3 Player*</h3>
+      
+      <div id="player">
+        <audio id="audio" controls onended="nextTrack()">
+            <source src="Audio/8Letters.mp3" type="audio/mp3">
+            <source src="Audio/Butterflies.mp3" type="audio/mp3">
+            <source src="Audio/Colorblind.mp3" type="audio/mp3">
+            <source src="Audio/ElijahWoods.mp3" type="audio/mp3">
+            <source src="Audio/GryffinOneRepublic.mp3" type="audio/mp3">
+            <source src="Audio/HateYouLoveYou.mp3" type="audio/mp3">
+            <source src="Audio/Maximillian.mp3" type="audio/mp3">
+            <source src="Audio/Mokita.mp3" type="audio/mp3">
+                </audio>
+        </div>        
+        <div id="controls">
+            <button onclick="previousTrack()">Previous Track</button>
+            <button onclick="playPause()">Play/Pause</button>
+            <button onclick="nextTrack()">Next Track</button>
+            <button onclick="stop()">Stop</button>
+        </div>
+    </div>
+    <br /> <br />
+
+<!-------------------------Set Timeout------------------------------------> 
+    <div class="col-8"> 
+        <h3>*Set Time-out*</h3>
+        <button onclick="setTimeout(timeout, 3000)" class="btn-success rounded mb-3"> Click for MP3 Playlists </button>
+                <br />
+                <p id="appear"> Please wait... </p>
+                <h3 class="text-success" id="how"></h3>
+    </div>
+    <br /> <br />
+
+<!-------------------------To Do List------------------------------------>    
+    <div class="col-8"> 
+        <h3> *To Do List* </h3>
+        <input type="text" id="todo_input" value>
+                <button class="btn-primary" onclick="add_todo()" id="todobtn"> Add to-do </button>
+                <br />
+                <h4> To do-list</h4>            
+                <ul id="todo_list">
+                </ul>
+    </div>
+    <br /> <br />
+
+<!-------------------------Switching Letters to UPPERCASE & lowercase------------------------------------>    
+
+    <div class="col-8">
+        <h3 class="text" style="font-family: Arial, Helvetica, sans-serif;"> *Switching Letters to UPPERCASE & lowercase* </h3>
+        <h4 id="upperlowertext">a b c d e f g h i j k l m n o p q r s t u v w x y z</h4>
+        <button class="btn-success m-1" onclick="uppercase()">Click for BIG Letters</button>
+        <button class="btn-warning m-1 mt-1" onclick="lowercase()">Click for small letters</button>      
+    </div>
+    <br /> <br />
+
+<!--------------------------------Hide/Unhide Full Text------------------------------------>
+
+    <div class="col-8">
+        <h3> *Hide/Unhide Full Text* </h3>
+        <span><img class="image" src="Image/Developer.jpg" height="200px" width="200px"></span>
+        <p>To check for more functionalities, go to <span id="dots">...</span><span id="the navigation bars and select a functionalities you want to try!">
+            the navigation bars and select a functionalities you want to try! Thank you! </span></p>
+            <button class="btn btn-outline-success me-2" type="button" onclick="myFunction()" id="myBtn">Read More</button>
+    </div>
+    
+  </div>
+</div>
+
+<br /> <br />
+
+<script src="index.js"></script>
+
+<footer class="container-fluid text-center">
+  <p>All Rights Reserved. 2023.</p>
+</footer>
+
+</body>
+</html>

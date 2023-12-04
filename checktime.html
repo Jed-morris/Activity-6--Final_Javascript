@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <title>Timecheck</title>
+<style>
+  
+    /* Remove the navbar's default margin-bottom and rounded borders */ 
+    .navbar {
+      background-color:#2550b2;
+      color: green;
+      margin-bottom: 0;
+      border-radius: 0;
+    }
+
+    /* Add a gray background color and some padding to the footer */
+    footer {
+      background-color: #526899;
+      padding: 25px;
+    }
+  </style>
+</head>
+<body>
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="#">Functions</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="calculator.html">Calculator</a></li>
+        <li class="active"><a style="background-color: yellowgreen;" href="checktime.html">Timecheck</a></li>
+        <li><a href="evenodd.html">Even & Odd #'s?</a></li>
+        <li><a href="fuelcons.html">Fuel Consumption Calculator</a></li>
+        <li><a href="show&hidepw.html">Show/Hide Password</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="container-fluid bg-3 text-center">    
+    <h3> Timecheck: </h3>
+            <span><img class="image" src="Image/Timecheck.jpg" height="300px" width="300px"></span>        
+            <p>Check the Date and Time now:</p>
+            <p id="date_time_button"></p>
+            <button class="btn btn-outline-success me-2" type="button" onclick="document.getElementById('date_time_button').innerHTML = Date()">See Time</button>
+</div>
+<br /> <br /> <br />
+<br /> <br /> <br />
+
+<footer class="container-fluid text-center">
+    <p>All Rights Reserved. 2023.</p>
+  </footer>
+  
+</body>
+</html>

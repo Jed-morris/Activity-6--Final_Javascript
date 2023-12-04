@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <title>Calculator</title>
+<style>
+  
+    /* Remove the navbar's default margin-bottom and rounded borders */ 
+    .navbar {
+      background-color:#2550b2;
+      color: green;
+      margin-bottom: 0;
+      border-radius: 0;
+    }
+    
+    .container {
+    width: 250px;
+    height: 250px;
+    position: static;
+    box-shadow: 10px 10px 10px 10px rgba(41, 105, 168, 0.8);
+    border: 2px solid green;
+}
+
+.keys {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
+    padding: 10px;
+    margin: auto;
+}
+
+.button {
+    background-color: azure;
+}
+
+.operator {
+    background-color: azure;
+}
+
+.button:hover {
+    background-color: lightgreen ;
+}
+
+    /* Add a gray background color and some padding to the footer */
+    footer {
+      background-color: #526899;
+      padding: 25px;
+    }
+  </style>
+</head>
+<body>
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="#">Functions</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li><a href="index.html">Home</a></li>
+        <li class="active"><a style="background-color: yellowgreen;" href="calculator.html">Calculator</a></li>
+        <li><a href="checktime.html">Timecheck</a></li>
+        <li><a href="evenodd.html">Even & Odd #'s?</a></li>
+        <li><a href="fuelcons.html">Fuel Consumption Calculator</a></li>
+        <li><a href="show&hidepw.html">Show/Hide Password</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="container-fluid bg-3 text-center">    
+    <h3>Calculator</h3>
+    <br />
+    <div class="container">
+
+        <br />
+        <table>
+            <tr>
+                <td colspan="3"><input type="text" id="result" class="screen" style="text-align: right;"></td>
+
+                <td>
+                    <input type="button" value="C" onclick="clearScreen()" class="clear"/>
+                </td>
+
+            </tr>
+        </table>
+
+        <div class="keys">
+
+            <input type="button" value="7" class="button" onclick="display('7')"></input>
+            <input type="button" value="8" class="button" onclick="display('8')"></input>
+            <input type="button" value="9" class="button" onclick="display('9')"></input>
+            <input type="button" value="+" class="button" onclick="display('+')"></input>
+            <input type="button" value="4" class="button" onclick="display('4')"></input>
+            <input type="button" value="5" class="button" onclick="display('5')"></input>
+            <input type="button" value="6" class="button" onclick="display('6')"></input>
+            <input type="button" value="-" class="button" onclick="display('-')"></input>
+            <input type="button" value="1" class="button" onclick="display('1')"></input>
+            <input type="button" value="2" class="button" onclick="display('2')"></input>
+            <input type="button" value="3" class="button" onclick="display('3')"></input>
+            <input type="button" value="*" class="operator" onclick="display('*')"></input>
+            <input type="button" value="0" class="button" onclick="display('0')"></input>
+            <input type="button" value="." class="button" onclick="display('.')"></input>
+            <input type="button" value="=" class="button equal-sign" onClick="solve()"></input>
+            <input type="button" value="/" class="button" onclick="display('/')"></input>
+                                                          
+    </div>
+</div>
+<br /> <br /> <br />
+<br /> <br /> <br />
+<script>
+    function display(val) {
+            document.getElementById('result').value += val;
+            return val;
+        }
+
+        function solve() {
+            let x = document.getElementById('result').value;
+            let y = eval(x);
+            document.getElementById('result').value = y;
+            return y;
+        }
+
+        function clearScreen() {
+            document.getElementById('result').value = '';
+        }
+</script>
+
+<footer class="container-fluid text-center">
+  <p>All Rights Reserved. 2023.</p>
+</footer>
+
+</body>
+</html>
